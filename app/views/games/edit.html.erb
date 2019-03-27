@@ -1,4 +1,5 @@
 <h1>Games#edit</h1>
 <p>Find me in app/views/games/edit.html.erb</p>
-<%= link_to("Oui !", game_path(1), method: :put, class: "btn btn-warning")%>
-<%= link_to("Non !", game_path(1), method: :put, class: "btn btn-warning")%>
+<%= @question %>
+<%= link_to "oui", game_path(params["id"], answer: "yes"), method: :path %>
+<%= link_to "non", game_path(params["id"], answer: "no"), method: :path %>
